@@ -31,3 +31,28 @@ Rotated Matrix:
 1 3
 
 ```
+## Answer
+
+![image](https://github.com/smitesht/coding-tricks/assets/52151346/5d7affd5-362d-4156-93a4-fd3e9271b08b)
+
+```
+// Transpose the matrix
+for (int i = 0; i < size; i++)
+{
+    for (int j = 0; j < i; j++)
+    {
+        swap(nums[i][j], nums[j][i]);
+    }
+}
+
+// swap 0th row to nth row, perform same other rows
+
+for (int i = 0; i < size/2; i++)
+{
+    for (int j = 0; j < size; j++)
+    {
+        swap(nums[i][j], nums[size - 1 - i][j]);
+    }
+}
+```
+
